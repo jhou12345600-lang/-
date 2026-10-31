@@ -41,7 +41,7 @@ select,input{font:inherit;background:var(--p2);color:var(--t);border:1px solid v
 .tabs{display:flex;gap:4px;margin:10px 0 6px;flex-wrap:wrap}.tabs button{flex:1;padding:6px 4px;font-size:13px}.tabs button.on{background:var(--acc);color:#1a1205;border-color:var(--acc);font-weight:700}
 .acts{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:330px;overflow:auto;padding-right:2px}
 .act{text-align:left;display:flex;flex-direction:column;gap:1px;padding:7px 9px}.act b{font-size:13px}.act small{font-size:11px;color:var(--mut);line-height:1.35}.act em{font-style:normal;font-size:11px;color:#b98cff}
-.endday{width:100%;margin-top:8px;padding:10px;font-weight:700;background:linear-gradient(180deg,#2b3d66,#1d2a47)}
+.autod{width:100%;margin-top:8px;padding:8px;background:#1d3a2f;border-color:#2c5a46}.endday{width:100%;margin-top:8px;padding:10px;font-weight:700;background:linear-gradient(180deg,#2b3d66,#1d2a47)}
 .tgt{display:flex;gap:10px}.tpt{width:92px;flex:none}.tpt svg,.cm svg{width:100%;border-radius:8px;display:block}.tinfo{flex:1;min-width:0}.tn{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.tn small{color:var(--mut)}
 .relrow{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:12px}.rbar,.fbar{flex:1;height:8px;border-radius:4px;background:linear-gradient(90deg,#d9485f,#3a4766,#2fb37a);position:relative}.rbar i,.fbar i{position:absolute;top:-4px;width:6px;height:16px;border-radius:3px;margin-left:-3px;background:#fff!important;box-shadow:0 0 0 2px #0a1120}
 .tags{display:flex;gap:4px;flex-wrap:wrap}.tg{font-style:normal;font-size:11px;padding:1px 7px;border-radius:10px;background:#22304d}.tg.ally{background:#1d3a66}.tg.trade{background:#1d4a3a}.tg.bad{background:#5a1f2b}.tg.war{background:#a3172a}.tg.warn{background:#5a4214}
@@ -70,8 +70,19 @@ h2{margin:0 0 12px}h3{margin:0 0 6px;color:var(--acc)}
 .chart{margin-bottom:10px}.chart svg{width:100%;font-size:11px;fill:var(--mut)}
 .achs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}.achi{background:var(--p2);border-radius:10px;padding:8px;opacity:.4;filter:grayscale(1)}.achi.on{opacity:1;filter:none;border:1px solid var(--acc)}.achi span{font-size:24px}.achi b{display:block}.achi small{font-size:11px;color:var(--mut)}
 .help p{margin:6px 0}
+#modal.b3m{padding:6px}#modal.b3m .mbox{max-width:1200px;padding:0;overflow:hidden;position:relative;max-height:none}
+.b3{position:relative;width:100%;aspect-ratio:16/9;max-height:90vh;background:#000}#b3c{position:absolute;inset:0}#b3c canvas{width:100%!important;height:100%!important;display:block}#b3c svg{width:100%;height:100%}
+.b3hud{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(#000b,#0000);gap:10px;pointer-events:none}
+.b3side{display:flex;align-items:center;gap:8px;flex:1;min-width:0}.b3side.r{justify-content:flex-end}.b3side b{white-space:nowrap}
+.b3hp{flex:1;max-width:200px;height:8px;background:#fff3;border-radius:4px;overflow:hidden;display:flex}.b3hp i{display:block;height:100%;background:#3ecf8e;transition:width .4s}.b3side.r .b3hp{justify-content:flex-end}.b3side.r .b3hp i{background:#ff5d6c}
+.b3vs{font-weight:900;color:var(--acc);font-size:18px;white-space:nowrap;text-shadow:0 2px 6px #000}
+.b3cap{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:#000b;padding:6px 16px;border-radius:20px;font-size:15px;white-space:nowrap;max-width:80%;overflow:hidden;text-overflow:ellipsis}
+.b3skip{position:absolute;right:10px;bottom:12px;background:#000a}
+.b3end{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;background:#000a;gap:10px;text-align:center}.b3end.show{display:flex;animation:mup .4s}
+.b3end .w,.b3end .l{font-size:48px;font-weight:900;color:var(--acc);text-shadow:0 4px 20px #000}.b3end .l{color:var(--bad)}
+@media (max-width:700px){.b3{aspect-ratio:auto;height:78vh}.b3side b{display:none}.b3cap{font-size:12px;bottom:56px}.b3vs{font-size:14px}}
 .stars{color:var(--acc);font-size:11px;letter-spacing:1px;display:block}.cands,.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.cands .cm svg,.vgrid .cm svg{width:100%;border-radius:8px;display:block}.cands .cm,.vgrid .cm{padding:6px}
-button.mini{padding:1px 8px;font-size:11px;margin-left:8px;background:#b3243a;border-color:#b3243a}.opt input[type=range]{flex:1;max-width:260px}
+button.mini{padding:1px 8px;font-size:11px;margin-left:8px;background:#b3243a;border-color:#b3243a}.vcard{display:flex;flex-direction:column;gap:4px}.vplay{padding:0;border:0;background:none;display:flex;flex-direction:column;align-items:center}.vcard select{width:100%;font-size:11px}.opt input[type=range]{flex:1;max-width:260px}
 #toasts{position:fixed;top:60px;right:12px;z-index:30;display:flex;flex-direction:column;gap:6px;pointer-events:none}.toast{background:#1d2a47;border:1px solid var(--line);padding:8px 14px;border-radius:10px;box-shadow:0 8px 24px #0008;animation:tin .3s;max-width:300px}.toast.bad{border-color:var(--bad)}.toast.ach{border-color:var(--acc);background:#2a2614}.toast.out{opacity:0;transform:translateX(20px);transition:.5s}@keyframes tin{from{transform:translateX(30px);opacity:0}}
 #dayov{position:fixed;inset:0;z-index:15;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;background:radial-gradient(circle,#0a1120cc,#0a1120f2);transition:opacity .4s}#dayov.show{opacity:1}#dayov div{text-align:center}#dayov b{display:block;font-size:42px;font-weight:900;color:var(--acc)}#dayov small{font-size:16px;color:#c9d6ee}
 .pt{display:block}
@@ -437,7 +448,7 @@ function newGame(id,name,look,diff){
 }
 
 // ================= 行動 =================
-function camp(){const m=me();if(!isDem(m))return '非民主體制';if(m.limit&&S.termNo>=m.limit)return '已達任期上限，不能再選';const left=S.nextElection-S.day;return left<=15?'':`大選前 15 天才能進行（還有 ${left-15} 天）`;}
+function camp(){const m=me();if(!isDem(m))return '非民主體制';if(termCap()&&S.termNo>=termCap())return '最後一任，任期屆滿時可選擇修憲或交棒';const left=S.nextElection-S.day;return left<=15?'':`大選前 15 天才能進行（還有 ${left-15} 天）`;}
 function warReason(){const t=S.sel;if(!t||t===S.me)return '請先選擇目標國家';if(allied(S.me,t))return '不能對盟友宣戰';if(atWar(S.me,t))return '已在交戰';if(rel(S.me,t)>-40)return `關係需 ≤ −40（目前 ${Math.round(rel(S.me,t))}）`;return '';}
 const ACTS=[
  {id:'address',cat:'內政',n:'發表全國演說',e:15,sc:'office',d:'選擇演說主題，切中民心就大加分。',mini:'address'},
@@ -458,6 +469,10 @@ const ACTS=[
  {id:'drill',cat:'國防',n:'舉行軍事演習',e:15,cost:0.05,sc:'military',scd:{banner:'聯合軍事演習'},d:'展現實力、凝聚民心，對手會不滿。',run(){return '大規模聯合演習展開。'+apply({t:-0.05,a:1,s:1,rel:rivals(2).map(i=>[i,-5])});}},
  {id:'nsc',cat:'國防',n:'召開國安會議',e:10,sc:'meeting',scd:{mode:'nsc',banner:'國家安全會議'},d:'掌握威脅情勢，提升穩定。',run(){const th=others().filter(i=>rel(S.me,i)<-40).sort((a,b)=>rel(S.me,a)-rel(S.me,b)).slice(0,3);return (th.length?'情報顯示主要威脅：'+th.map(i=>C(i).name+'（關係 '+Math.round(rel(S.me,i))+'）').join('、')+'。':'目前沒有明顯的外部威脅。')+apply({s:2});}},
  {id:'war',cat:'國防',n:'對目標宣戰',e:20,tgt:1,sc:'meeting',scd:{mode:'nsc',banner:'作戰會議'},d:'需與目標關係 ≤ −40，且非同盟。',cond:warReason,run(){S.queue.unshift({id:'confirmWar',p:{t:S.sel}});return '你召集國安團隊研擬作戰計畫……';}},
+ {id:'navalop',cat:'國防',n:'⚓ 指揮海戰（3D）',e:20,cost:0.05,tgt:1,sc:'military',scd:{mode:'war',banner:'海上作戰'},d:'派遣艦隊出擊，勝負會推動戰況。',cond:()=>atWar(S.me,S.sel)?'':'需與目標交戰中',run(){return warOp('naval');}},
+ {id:'landop',cat:'國防',n:'🪖 指揮陸戰（3D）',e:20,cost:0.05,tgt:1,sc:'military',scd:{mode:'war',banner:'地面作戰'},d:'裝甲部隊推進，勝負會推動戰況。',cond:()=>atWar(S.me,S.sel)?'':'需與目標交戰中',run(){return warOp('land');}},
+ {id:'airop',cat:'國防',n:'✈️ 指揮空戰（3D）',e:20,cost:0.05,tgt:1,sc:'military',scd:{mode:'war',banner:'空中作戰'},d:'戰機升空爭奪制空權，勝負會推動戰況。',cond:()=>atWar(S.me,S.sel)?'':'需與目標交戰中',run(){return warOp('air');}},
+ {id:'wargame',cat:'國防',n:'🎮 兵棋推演（3D）',e:10,tgt:1,sc:'meeting',scd:{mode:'nsc',banner:'兵棋推演'},d:'模擬與目標開戰的結果，預覽海、陸、空 3D 戰場。不會真的開戰。',cond:()=>atWar(S.me,S.sel)?'交戰中請直接指揮作戰':'',run(){const t=S.sel;const pw=me().mil+myAllies().reduce((s,o)=>s+C(o).mil*0.3,0),pe=C(t).mil+others().filter(o=>o!==t&&allied(o,t)).reduce((s,o)=>s+C(o).mil*0.4,0);const win=Math.random()<clamp(pw/(pw+pe)+0.04,0.1,0.9);S._battle={type:pick(['naval','land','air']),win,me:S.me,enemy:t};return `兵棋推演：對${C(t).name}作戰${win?'我方佔上風':'我方居於劣勢'}（勝率約 ${Math.round(pw/(pw+pe)*100)}%）。`+apply({s:1});}},
  {id:'peace',cat:'國防',n:'向目標提議停火',e:10,tgt:1,sc:'call',d:'對方是否接受取決於戰況。',cond:()=>atWar(S.me,S.sel)?'':'目前未與目標交戰',run(){return proposePeace(S.sel);}},
  {id:'concede',cat:'國防',n:'讓步求和',e:10,tgt:1,sc:'sign',scd:{banner:'停戰協議'},d:'必定停戰，但支持度與國庫大損。',cond:()=>atWar(S.me,S.sel)?'':'目前未與目標交戰',run(){return concede(S.sel);}},
  {id:'call',cat:'外交',n:'電話會談',e:5,tgt:1,sc:'call',d:'小幅改善關係。',cond:()=>atWar(S.me,S.sel)?'交戰中對方不接電話':'',run(){const t=S.sel;return `你與${C(t).name}${C(t).title}通話。`+apply({rel:[[t,ri(3,6)]]});}},
@@ -479,6 +494,10 @@ const ACTS=[
  {id:'propaganda',cat:'權力',n:'發動宣傳攻勢',e:10,sc:'speech',scd:{banner:'官方媒體特別報導'},d:'官媒全力宣傳施政成就。',run(){return '官方媒體密集報導政績。'+apply({a:3,p:-1});}},
  {id:'parade',cat:'權力',n:'舉行盛大閱兵',e:20,cost:0.1,sc:'military',scd:{mode:'parade',banner:'國慶閱兵'},d:'展示國力、凝聚民心。',run(){return '閱兵典禮氣勢磅礡。'+apply({t:-0.1,a:3,el:3,rel:rivals(2).map(i=>[i,-3])});}},
 ];
+function autoPick(){const pref=['tour','cabinet','forum','infra','tech','call','visit','trade','ally','canvass','rally','debate','ads','pledge','elders','propaganda','un','drill','welfare','rest'];
+ if(S.energy<30)return ACTS.find(a=>a.id==='rest');const cand=friends(10).filter(i=>!atWar(S.me,i));const keep=S.sel;
+ for(const id of pref){const a=ACTS.find(x=>x.id===id);if(!a)continue;if(a.tgt){for(const t of cand){S.sel=t;if(!avail(a)&&repMult(a.id)>0.9)return a;}S.sel=keep;continue;}if(!avail(a)&&repMult(a.id)>0.9&&(!a.cost||S.treasury>0))return a;}
+ S.sel=keep;return ACTS.find(a=>a.id==='rest');}
 function avail(a){if(S.slots.length>=3)return '今天行程已滿';if(a.cat==='選戰'&&!isDem(me()))return '非民主體制';if(a.cat==='權力'&&isDem(me()))return '民主體制不適用';
  if(a.tgt&&(!S.sel||S.sel===S.me))return '請先在地圖上選擇目標國家';if(a.cost&&S.treasury-money(a.cost)<-me().gdp*0.15)return '國庫赤字過高';
  return a.cond?a.cond():'';}
@@ -573,12 +592,13 @@ function aiTurn(){const O=others();const n=ri(1,3);
  S.trade=S.trade.filter(k=>{if(rel(...k.split('|'))<-10&&Math.random()<0.08){const [a,b]=k.split('|');news('eco',`${C(a).name}與${C(b).name}的貿易協定因關係惡化而終止。`);return false;}return true;});
  S.allies=S.allies.filter(k=>{if(rel(...k.split('|'))<0&&Math.random()<0.05){const [a,b]=k.split('|');news('dip',`💔 ${C(a).name}與${C(b).name}的同盟關係宣告破裂。`);return false;}return true;});}
 
-function poll(){return clamp(50+(S.approval-48)*0.75+S.campaign+(skl('camp')-3)*0.8,3,97);}
-function holdElection(){const m=me();const share=clamp(poll()+randn()*3,3,97);S.lastShare=share;
+function poll(){return clamp(50+(S.approval-50)*0.5+S.campaign*0.7+(skl('camp')-3)*0.8,18,82);}
+const termCap=()=>{const m=me();return m.limit?m.limit+(S.extraTerms||0):0;};
+function holdElection(){const m=me();const share=clamp(poll()+randn()*2.5,15,85);S.lastShare=share;
  if(share>50){S.termNo++;S.termStart=S.day;S.nextElection=S.day+m.term*30;S.campaign=0;S.approval+=4;S.oppLook=genLook('opp'+Math.random(),m.reg);S.oppName=gName(S.oppLook);news('pol',`🗳️ ${S.name}以 ${share.toFixed(1)}% 得票率勝選，展開第 ${S.termNo} 任期！`);S.queue.unshift({id:'electionWin',p:{share}});}
  else{S.elecShare=share;gameOver('election');}}
 function checks(){const m=me();if(S.over)return;
- if(isDem(m)){if(S.day>=S.nextElection){if(m.limit&&S.termNo>=m.limit)return gameOver('termEnd');S.queue.push({id:'electionNight'});return;}
+ if(isDem(m)){if(S.day>=S.nextElection){if(S.queue.some(q=>q.id==='electionNight'||q.id==='termLimit'))return;if(termCap()&&S.termNo>=termCap()){S.queue.push({id:'termLimit'});return;}S.queue.push({id:'electionNight'});return;}
   if(S.approval<8)return gameOver('resign');
   if(m.gov==='parl'&&S.approval<25&&Math.random()<0.05&&!S.queue.some(q=>q.id==='noConf'))S.queue.push({id:'noConf'});
   if(m.gov==='dem'&&S.approval<15&&Math.random()<0.04&&!S.queue.some(q=>q.id==='impeach'))S.queue.push({id:'impeach'});}
@@ -595,6 +615,11 @@ function doShuffle(i,c){const old=S.cab[i];S.cab[i]=c;S.lastShuffle=S.day;news('
 function migrate(){C0.forEach(c=>{if(!S.c[c.id]){S.c[c.id]={...c,baseGrowth:c.growth,mil0:c.mil,elec:isDem(c)?ri(20,(c.term||4)*30):0};}});
  for(let i=0;i<IDS.length;i++)for(let j=i+1;j<IDS.length;j++){const k=key(IDS[i],IDS[j]);if(S.base[k]==null){const ov=REL_OVR.find(([a,b])=>key(a,b)===k);S.base[k]=ov?ov[2]:10;S.rel[k]=S.base[k];}}
  S.cab.forEach(c=>{if(!c.sk)c.sk=3;});if(!S.anchor)S.anchor=genLook('anchor'+Math.random(),me().reg);S.recent=S.recent||[];}
+function successor(name,look){const m=me();const old=S.name;S.name=name||gName(look);S.look=look;S.termNo=1;S.extraTerms=0;S.termStart=S.day;S.campaign=0;S.dynasty=(S.dynasty||1)+1;
+ if(isDem(m))S.nextElection=S.day+m.term*30;S.approval=Math.max(S.approval,55);S.stability=Math.max(S.stability,55);S.elite=Math.max(S.elite,55);S.energy=100;S.over=null;S.lowStab=0;S.queue=[];
+ news('pol',`👑 ${old}交棒，${S.name}接任${m.name}${m.title}，展開第 ${S.dynasty} 代政府。`);}
+function comeback(){const m=me();S.over=null;S.queue=[];S.lowStab=0;S.approval=Math.max(S.approval,52);S.stability=Math.max(S.stability,55);S.elite=Math.max(S.elite,55);S.energy=100;S.termNo++;S.termStart=S.day;S.campaign=0;S.comebacks=(S.comebacks||0)+1;
+ if(isDem(m))S.nextElection=S.day+m.term*30;news('pol',`🔁 ${S.name}東山再起，重新執掌${m.name}政權！`);}
 function save(){try{if(!S.over)localStorage.setItem('wl_save',JSON.stringify(S));}catch(e){}}
 function load(){try{const s=localStorage.getItem('wl_save');if(!s)return false;const o=JSON.parse(s);if(o.v!==2)return false;S=o;migrate();return true;}catch(e){return false;}}
 
@@ -764,6 +789,10 @@ const SYS={
  warEnd:{adv:'def',sc:'sign',scd:{banner:'戰爭結束'},title:'戰爭落幕',text:p=>p.txt,ch:()=>[{t:'知道了',f:()=>''}]},
  electionNight:{adv:'camp',sc:'rally',title:'開票之夜',text:()=>`投票已經結束，全國各地開始計票。最後民調顯示你的得票率約 ${poll().toFixed(1)}%……`,ch:()=>[{t:'📺 看開票結果',f:()=>{holdElection();return S.over?'':'';}}]},
  electionWin:{adv:'camp',sc:'election',title:'🎉 勝選連任！',text:p=>`你以 ${p.share.toFixed(1)}% 的得票率擊敗對手，贏得新的任期！`,ch:()=>[{t:'發表勝選感言',f:()=>'支持者陷入狂歡。'}]},
+ termLimit:{adv:'chief',sc:'speech',scd:{banner:'任期即將屆滿'},title:'任期即將屆滿',text:()=>`${me().title}，依照憲法，您的任期即將屆滿，不能再參選。接下來要怎麼做？`,ch:()=>[
+  {t:'📜 推動修憲，爭取再連任',h:'穩定↓ 聲望↓，進入大選',f:()=>{S.extraTerms=(S.extraTerms||0)+1;S.queue.unshift({id:'electionNight'});return '修憲案在爭議中通過，你將再次投入大選！'+apply({s:-6,p:-4,a:-3});}},
+  {t:'👑 交棒給接班人，繼續玩',h:'換一位新領袖',f:()=>{S._succ=1;return '';}},
+  {t:'🎖️ 光榮卸任（結束遊戲）',h:'結算評價',f:()=>{gameOver('termEnd');return '';}}]},
  council:{adv:'chief',sc:'power',title:'權力會議',text:()=>`定期權力會議召開，權力核心對你的領導${S.elite>60?'表達高度擁戴':'雖有雜音，仍維持支持'}。`,ch:()=>[{t:'接受擁戴',f:()=>apply({el:3,a:2})}]},
  noConf:{adv:'chief',sc:'meeting',scd:{banner:'不信任案'},title:'國會提出不信任案',text:()=>`支持度低迷，在野黨聯合部分執政黨議員，對你提出不信任案！`,ch:()=>[
   {t:'全力遊說議員',h:'看支持度',f:()=>{if(Math.random()<S.approval/30+0.2)return '不信任案驚險未過！'+apply({s:-2});gameOver('noConf');return '';}},
@@ -808,20 +837,25 @@ try{Object.assign(VOICE,JSON.parse(localStorage.getItem('wl_voice')||'{}'));}cat
 function saveVoice(){try{localStorage.setItem('wl_voice',JSON.stringify(VOICE));}catch(e){}}
 // np = 用到同性別真實語音時的音高；fp = 只有異性別語音可用時的補償音高
 const VTYPES={
- ym:{n:'年輕男子',g:'m',np:1.05,fp:0.72,rate:1.1},yf:{n:'年輕女子',g:'f',np:1.3,fp:1.5,rate:1.1},
- mm:{n:'中年男子',g:'m',np:0.88,fp:0.58,rate:0.98},mf:{n:'中年女子',g:'f',np:1.05,fp:1.2,rate:0.98},
- sm:{n:'資深男子',g:'m',np:0.7,fp:0.45,rate:0.86},sf:{n:'資深女子',g:'f',np:0.85,fp:0.98,rate:0.86}};
+ ym:{n:'年輕男子',g:'m',np:1.12,fp:0.78,rate:1.16},yf:{n:'年輕女子',g:'f',np:1.42,fp:1.6,rate:1.16},
+ mm:{n:'中年男子',g:'m',np:0.9,fp:0.6,rate:1.0},mf:{n:'中年女子',g:'f',np:1.08,fp:1.25,rate:1.0},
+ sm:{n:'資深男子',g:'m',np:0.7,fp:0.46,rate:0.8},sf:{n:'資深女子',g:'f',np:0.86,fp:1.0,rate:0.82}};
 const VKEYS=Object.keys(VTYPES);
+VOICE.pick=VOICE.pick||{};
 function vtypeOf(look){if(look&&look.voice&&VTYPES[look.voice])return look.voice;if(!look)return 'mm';return (look.age<0.4?'y':look.age<0.7?'m':'s')+(look.g==='m'?'m':'f');}
 const HAS_TTS=typeof window!=='undefined'&&'speechSynthesis' in window&&'SpeechSynthesisUtterance' in window;
-let VOICES=[];
-function loadVoices(){try{VOICES=speechSynthesis.getVoices().filter(v=>/^(zh|cmn|yue)/i.test(v.lang));}catch(e){VOICES=[];}}
-if(HAS_TTS){loadVoices();try{speechSynthesis.addEventListener('voiceschanged',loadVoices);}catch(e){}}
+let VOICES=[],VMAP={};
 const MALE_RE=/zhiwei|yunjhe|kangkang|yunxi|yunyang|yunjian|yunze|yunfeng|yunhao|yunye|yunxia|wanlung|li-?mu|liang|danny|male|男/i;
-function voiceFor(g){const tw=VOICES.filter(v=>/TW|Hant/i.test(v.lang)),cn=VOICES.filter(v=>/CN|Hans|cmn/i.test(v.lang)),any=VOICES;
- const isM=v=>MALE_RE.test(v.name)&&!/female/i.test(v.name);
- for(const pool of [tw,cn,any]){const v=pool.find(x=>g==='m'?isM(x):!isM(x));if(v)return {v,native:true};}
- const v=tw[0]||cn[0]||any[0];return v?{v,native:false}:{v:null,native:false};}
+const isMaleV=v=>MALE_RE.test(v.name)&&!/female|女/i.test(v.name);
+const isYue=v=>/HK|yue|Cantonese|粵/i.test(v.lang+v.name);
+function loadVoices(){try{VOICES=speechSynthesis.getVoices().filter(v=>/^(zh|cmn|yue)/i.test(v.lang));}catch(e){VOICES=[];}assignVoices();}
+// 依「本機語音（可調音高）> 台灣 > 中國」排序，六種聲音盡量分配到不同的語音
+function assignVoices(){VMAP={};const md=VOICES.filter(v=>!isYue(v));const score=v=>(v.localService!==false?4:0)+(/TW|Hant/i.test(v.lang)?2:/CN|Hans/i.test(v.lang)?1:0);const srt=md.slice().sort((a,b)=>score(b)-score(a));
+ const M=srt.filter(isMaleV),F=srt.filter(v=>!isMaleV(v));const order={m:['mm','ym','sm'],f:['mf','yf','sf']};
+ for(const g of ['m','f']){const own=g==='m'?M:F,oth=g==='m'?F.filter(v=>v.localService!==false).concat(F):M;order[g].forEach((k,i)=>{if(own.length)VMAP[k]={v:own[i%own.length],native:true};else if(oth.length)VMAP[k]={v:oth[i%oth.length],native:false};else VMAP[k]={v:null,native:false};});}
+ for(const k of VKEYS){const uri=VOICE.pick[k];if(uri){const v=VOICES.find(x=>x.voiceURI===uri);if(v)VMAP[k]={v,native:VTYPES[k].g==='m'?isMaleV(v):!isMaleV(v)};}}}
+if(HAS_TTS){loadVoices();try{speechSynthesis.addEventListener('voiceschanged',loadVoices);}catch(e){}setTimeout(loadVoices,800);}
+function voiceFor(k){if(!VOICES.length&&HAS_TTS)loadVoices();return VMAP[k]||{v:null,native:false};}
 function cleanSpeech(t){return String(t).replace(/（[^）]*）/g,'').replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}]/gu,'').replace(/[「」『』]/g,'').replace(/\s+/g,' ').trim();}
 let SPEAK_EL=null;
 function stopSpeak(){if(HAS_TTS)try{speechSynthesis.cancel();}catch(e){}if(SPEAK_EL){SPEAK_EL.classList.remove('talking');SPEAK_EL=null;}}
@@ -829,12 +863,12 @@ function stopSpeak(){if(HAS_TTS)try{speechSynthesis.cancel();}catch(e){}if(SPEAK
 function speak(text,look,el,onend){const txt=cleanSpeech(text);const done=()=>{if(el)el.classList.remove('talking');onend&&onend();};
  if(el){el.classList.add('talking');SPEAK_EL=el;}
  if(!VOICE.on||!HAS_TTS||!txt){if(el)setTimeout(()=>el.classList.remove('talking'),Math.min(6000,600+txt.length*90));onend&&onend();return;}
- try{speechSynthesis.cancel();const t=VTYPES[vtypeOf(look)];const u=new SpeechSynthesisUtterance(txt);const {v,native}=voiceFor(t.g);
+ try{speechSynthesis.cancel();const k=vtypeOf(look),t=VTYPES[k];const u=new SpeechSynthesisUtterance(txt);const {v,native}=voiceFor(k);
   if(v){u.voice=v;u.lang=v.lang;}else u.lang='zh-TW';
   u.pitch=clamp(native?t.np:t.fp,0,2);u.rate=clamp(t.rate*VOICE.rate,0.5,2);u.volume=VOICE.vol;
   u.onend=done;u.onerror=done;speechSynthesis.speak(u);
   setTimeout(()=>{if(el&&!speechSynthesis.speaking)el.classList.remove('talking');},Math.min(15000,1500+txt.length*260));}catch(e){done();}}
-function voiceInfo(){if(!HAS_TTS)return '這個瀏覽器不支援語音合成。';if(!VOICES.length)return '找不到中文語音，請確認系統有安裝中文語音包。';const m=VOICES.some(v=>MALE_RE.test(v.name));return `偵測到 ${VOICES.length} 個中文語音${m?'（含男聲）':'（沒有男聲，男性角色會用調低音高的方式模擬）'}。`;}
+function voiceInfo(){if(!HAS_TTS)return '這個瀏覽器不支援語音合成。';if(!VOICES.length)return '找不到中文語音，請確認系統有安裝中文語音。';const m=VOICES.filter(isMaleV).length;return `偵測到 ${VOICES.length} 個中文語音（男聲 ${m} 個）。${m?'':'沒有男聲時，男性角色會用調低音高的方式模擬。'}`;}
 
 // ================= 程序生成背景音樂 =================
 const BGM={on:false,ctx:null,timer:null,step:0,master:null};
@@ -874,6 +908,158 @@ const LEADERLINE={visit:t=>`歡迎來到${C(t).name}！很高興見到您。`,ca
 const ANSLINE={honest:'謝謝你的問題。我坦白向國人說明，政府正在全力處理。',tough:'這種說法完全不符合事實，政府的立場非常清楚！',humor:'哈哈，這個問題問得好，我回家再問問我的家人。'};
 const ADDRLINE={eco:'各位國人，今晚我要向大家提出振興經濟的藍圖，讓每個人的荷包都更有感！',unity:'各位國人，此刻我們必須團結一心，沒有任何困難能打倒我們！',reform:'各位國人，我承諾大刀闊斧改革，整頓所有弊端！',sec:'各位國人，捍衛國家是我最重要的責任，我們絕不退讓！'};
 
+// ================= 3D 戰場（Three.js） =================
+const THREE_URL='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+let THREE_P=null;
+function loadThree(){if(window.THREE)return Promise.resolve();if(THREE_P)return THREE_P;THREE_P=new Promise((res,rej)=>{const s=document.createElement('script');s.src=window.THREE_LOCAL||THREE_URL;s.onload=res;s.onerror=()=>{THREE_P=null;rej(new Error('3D 引擎載入失敗'));};document.head.appendChild(s);});return THREE_P;}
+let B3stop=null;
+const BTYPE={naval:{n:'海戰',ic:'⚓',u:['驅逐艦','巡防艦','巡洋艦']},land:{n:'陸戰',ic:'🪖',u:['主力戰車','裝甲車','自走砲']},air:{n:'空戰',ic:'✈️',u:['戰鬥機','攔截機','多用途戰機']}};
+
+// cfg: {type, win, me, enemy, onEnd}
+function battle3D(cfg){const T=BTYPE[cfg.type];
+ modal(`<div class="b3"><div id="b3c"></div><div class="b3hud"><div class="b3side">${flagSVG(cfg.me,30,20)}<b>${C(cfg.me).name}</b><div class="b3hp"><i id="hpA"></i></div><span id="cntA"></span></div><div class="b3vs">${T.ic} ${T.n}</div><div class="b3side r"><span id="cntB"></span><div class="b3hp"><i id="hpB"></i></div><b>${C(cfg.enemy).name}</b>${flagSVG(cfg.enemy,30,20)}</div></div><div class="b3cap" id="b3cap">部隊集結中……</div><div class="b3end" id="b3end"></div><button class="b3skip" onclick="B3skip&&B3skip()">⏭ 跳過</button></div>`,'b3m');
+ loadThree().then(()=>runBattle(cfg)).catch(e=>{$('#b3c').innerHTML=sceneSVG('military',{mode:'war',banner:T.n});$('#b3cap').textContent='（3D 引擎無法載入，改用 2D 畫面）';setTimeout(()=>endBanner(cfg),2500);});}
+let B3skip=null;
+function endBanner(cfg,stats){const e=$('#b3end');if(!e)return;e.innerHTML=`<div class="${cfg.win?'w':'l'}">${cfg.win?'🎖️ 我方勝利':'💥 我方失利'}</div>${stats?`<p>擊毀敵軍 ${stats.k} · 我方損失 ${stats.l}</p>`:''}<button class="pri big" onclick="closeModal();(window._b3end||(()=>{}))()">返回指揮中心</button>`;e.className='show';sfx(cfg.win?'win':'bad');}
+
+function runBattle(cfg){const T=BTYPE[cfg.type];const box=$('#b3c');if(!box)return;const W=()=>box.clientWidth||800,H=()=>box.clientHeight||450;
+ const R=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});R.setPixelRatio(Math.min(devicePixelRatio,2));R.setSize(W(),H());R.shadowMap.enabled=true;R.shadowMap.type=THREE.PCFSoftShadowMap;R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=cfg.type==='land'?0.85:1.0;box.appendChild(R.domElement);
+ const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(50,W()/H(),0.5,3000);
+ const dusk=Math.random()<0.45,type=cfg.type;
+ const skyTop=new THREE.Color(dusk?0x2b2f5a:0x2f6db3),skyBot=new THREE.Color(dusk?0xf0905a:0xcfe4f7);
+ scene.fog=new THREE.Fog(skyBot.clone().lerp(new THREE.Color(0x888888),.25),type==='land'?260:360,type==='land'?1300:1700);
+ const sky=new THREE.Mesh(new THREE.SphereGeometry(1500,32,16),new THREE.ShaderMaterial({side:THREE.BackSide,depthWrite:false,uniforms:{top:{value:skyTop},bot:{value:skyBot}},vertexShader:'varying vec3 vp;void main(){vp=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:'uniform vec3 top;uniform vec3 bot;varying vec3 vp;void main(){float h=normalize(vp).y;gl_FragColor=vec4(mix(bot,top,clamp(h*2.2+.05,0.,1.)),1.);}'}));scene.add(sky);
+ scene.add(new THREE.HemisphereLight(dusk?0xffc9a0:0xdfefff,type==='naval'?0x1a3550:0x3b4a2a,dusk?0.55:0.75));
+ const sun=new THREE.DirectionalLight(dusk?0xffb070:0xfff4e0,dusk?1.6:1.9);sun.position.set(dusk?-200:120,dusk?70:220,dusk?-120:80);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);const sc=sun.shadow.camera;sc.left=sc.bottom=-220;sc.right=sc.top=220;sc.near=10;sc.far=700;sun.shadow.bias=-0.0005;scene.add(sun);
+ const sunDisc=new THREE.Mesh(new THREE.SphereGeometry(40,16,8),new THREE.MeshBasicMaterial({color:dusk?0xffb46a:0xfff6d8,fog:false}));sunDisc.position.copy(sun.position).normalize().multiplyScalar(1300);scene.add(sunDisc);
+ // ---------- 材質與工具 ----------
+ const std=(c,m=.35,r=.65)=>new THREE.MeshStandardMaterial({color:c,metalness:m,roughness:r});
+ const add=(g,geo,mat,x=0,y=0,z=0)=>{const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;g.add(m);return m;};
+ const cv=document.createElement('canvas');cv.width=cv.height=64;const cx=cv.getContext('2d');const gr=cx.createRadialGradient(32,32,0,32,32,32);gr.addColorStop(0,'rgba(255,255,255,1)');gr.addColorStop(.35,'rgba(255,255,255,.55)');gr.addColorStop(1,'rgba(255,255,255,0)');cx.fillStyle=gr;cx.fillRect(0,0,64,64);const soft=new THREE.CanvasTexture(cv);
+ const myCol=new THREE.Color(C(cfg.me).fl[1]),enCol=new THREE.Color(C(cfg.enemy).fl[1]);
+ // ---------- 粒子 ----------
+ const parts=[],pool=[];
+ function spawn(pos,o){let sp=pool.pop();if(!sp){sp=new THREE.Sprite(new THREE.SpriteMaterial({map:soft,transparent:true,depthWrite:false}));}
+  sp.material.color.set(o.c);sp.material.blending=o.add?THREE.AdditiveBlending:THREE.NormalBlending;sp.material.opacity=o.op??1;sp.position.copy(pos);sp.scale.setScalar(o.s||2);scene.add(sp);
+  parts.push({sp,v:o.v||new THREE.Vector3(),life:0,max:o.life||1,g:o.g||0,grow:o.grow||1,op:o.op??1,drag:o.drag??0.98});}
+ const rv=(a)=>new THREE.Vector3((Math.random()-.5)*a,(Math.random()-.5)*a,(Math.random()-.5)*a);
+ const lights=[0,1,2].map(()=>{const l=new THREE.PointLight(0xffaa55,0,120,2);scene.add(l);return l;});let li=0;
+ let shake=0;
+ function explode(pos,big=1,water=false){const l=lights[li++%3];l.position.copy(pos).add(new THREE.Vector3(0,4,0));l.intensity=6*big;l.userData.t=0;shake=Math.max(shake,0.6*big);
+  for(let i=0;i<14*big;i++)spawn(pos.clone().add(rv(3*big)),{c:i%3?0xffa040:0xffe080,add:1,s:4+Math.random()*6*big,v:rv(14*big).add(new THREE.Vector3(0,6,0)),life:.5+Math.random()*.5,grow:1.6});
+  for(let i=0;i<12*big;i++)spawn(pos.clone().add(rv(4*big)),{c:water?0xe8f2ff:(i%2?0x3a3a3a:0x5c5650),op:.75,s:5+Math.random()*7*big,v:rv(5).add(new THREE.Vector3(0,water?14:4+Math.random()*4,0)),g:water?-12:0,life:2+Math.random()*2.5,grow:2.2,drag:.97});
+  if(!water)for(let i=0;i<6*big;i++)spawn(pos.clone(),{c:0x222222,s:1,v:rv(30).add(new THREE.Vector3(0,18,0)),g:-30,life:1.4,grow:1});
+  sfx('war');}
+ function splash(pos){for(let i=0;i<16;i++)spawn(pos.clone().add(rv(2)),{c:0xf4f9ff,op:.85,s:2+Math.random()*3,v:new THREE.Vector3((Math.random()-.5)*6,14+Math.random()*16,(Math.random()-.5)*6),g:-30,life:1.3,grow:1.8});}
+ function puff(pos){for(let i=0;i<8;i++)spawn(pos.clone().add(rv(2)),{c:0x8a7a60,op:.7,s:3+Math.random()*3,v:rv(6).add(new THREE.Vector3(0,6,0)),life:1.6,grow:2});}
+ // ---------- 地形 / 海面 ----------
+ let water=null,terrH=()=>0;
+ if(type==='naval'||type==='air'&&Math.random()<.5){const g=new THREE.PlaneGeometry(2400,2400,110,110);g.rotateX(-Math.PI/2);water=new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:dusk?0x10283c:0x0c3352,metalness:.55,roughness:.22}));water.receiveShadow=true;scene.add(water);water.userData.base=g.attributes.position.array.slice();}
+ else{terrH=(x,z)=>Math.sin(x*.018)*6+Math.cos(z*.021)*5+Math.sin((x+z)*.05)*1.6+(Math.abs(z)<90&&Math.abs(x)<160?-3:0);const g=new THREE.PlaneGeometry(1800,1800,140,140);g.rotateX(-Math.PI/2);const p=g.attributes.position,col=[];const cA=new THREE.Color(0x56703a),cB=new THREE.Color(0x8a7a52),cC=new THREE.Color(0x3f5a2c);
+  for(let i=0;i<p.count;i++){const x=p.getX(i),z=p.getZ(i),h=terrH(x,z)+(Math.abs(x)>300||Math.abs(z)>300?Math.max(0,(Math.hypot(x,z)-300)*.12)*(1+Math.sin(x*.01)):0);p.setY(i,h);const c=cA.clone().lerp(h>6?cC:cB,Math.min(1,Math.abs(h)/12)+Math.random()*.08).convertSRGBToLinear();col.push(c.r,c.g,c.b);}
+  g.setAttribute('color',new THREE.Float32BufferAttribute(col,3));g.computeVertexNormals();const t=new THREE.Mesh(g,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.95}));t.receiveShadow=true;scene.add(t);
+  const trunk=std(0x4a3524,0,.9),leaf=std(0x2f4a24,0,.9);for(let i=0;i<120;i++){const x=(Math.random()-.5)*700,z=(Math.random()-.5)*700;if(Math.abs(z)<90&&Math.abs(x)<180)continue;const tr=new THREE.Group();add(tr,new THREE.CylinderGeometry(.4,.6,3,6),trunk,0,1.5,0);add(tr,new THREE.ConeGeometry(2.6,7,7),leaf,0,6,0);tr.position.set(x,terrH(x,z),z);tr.scale.setScalar(.8+Math.random()*.9);scene.add(tr);}}
+ if(type==='air'){for(let i=0;i<26;i++){const p=new THREE.Vector3((Math.random()-.5)*900,60+Math.random()*120,(Math.random()-.5)*900);for(let k=0;k<6;k++)spawn(p.clone().add(new THREE.Vector3((Math.random()-.5)*40,(Math.random()-.5)*8,(Math.random()-.5)*25)),{c:0xffffff,op:.55,s:30+Math.random()*30,life:1e9,grow:1,drag:1});}}
+ // ---------- 單位模型 ----------
+ function mkShip(side){const g=new THREE.Group(),hullM=std(side?0x4e5864:0x5f666e,.5,.55),dk=std(0x5a5e63,.3,.8),sup=std(side?0x737d88:0x868d95,.4,.5);
+  const sh=new THREE.Shape();sh.moveTo(-13,-2.4);sh.lineTo(8,-2.4);sh.quadraticCurveTo(13,-1.4,15.5,0);sh.quadraticCurveTo(13,1.4,8,2.4);sh.lineTo(-13,2.4);sh.lineTo(-13,-2.4);
+  const hull=add(g,new THREE.ExtrudeGeometry(sh,{depth:3.6,bevelEnabled:true,bevelSize:.3,bevelThickness:.3,bevelSegments:1}),hullM);hull.rotation.x=-Math.PI/2;hull.position.y=-1.8;
+  const deck=add(g,new THREE.ExtrudeGeometry(sh,{depth:.2,bevelEnabled:false}),dk);deck.rotation.x=-Math.PI/2;deck.position.y=1.9;deck.scale.set(.97,.92,1);
+  add(g,new THREE.BoxGeometry(7,3.2,3.4),sup,-2,3.6,0);add(g,new THREE.BoxGeometry(3.6,2.4,2.8),sup,-1.4,6.3,0);add(g,new THREE.BoxGeometry(2.2,.6,3.2),dk,-.2,7.4,0);
+  add(g,new THREE.CylinderGeometry(.15,.2,6,6),dk,-1.6,10,0);const rad=add(g,new THREE.BoxGeometry(.3,.9,2.6),dk,-1.6,12.4,0);g.userData.radar=rad;
+  add(g,new THREE.CylinderGeometry(.9,1.1,2.6,10),sup,-6.2,4.4,0);
+  for(const [x,f] of [[6.5,1],[-10,-1]]){const t=new THREE.Group();add(t,new THREE.CylinderGeometry(1.3,1.5,1,12),sup,0,0,0);const b=add(t,new THREE.CylinderGeometry(.16,.2,3.6,8),dk,1.8*f,.3,0);b.rotation.z=Math.PI/2;t.position.set(x,2.5,0);g.add(t);}
+  const st=add(g,new THREE.BoxGeometry(24,.5,3.75),std(side?myCol:enCol,.2,.6),-1,-.4,0);st.castShadow=false;
+  g.userData.muzzle=new THREE.Vector3(8.5,3,0);return g;}
+ function mkTank(side){const g=new THREE.Group(),cam=std(side?0x5a6b3a:0x8a7d58,.25,.8),dk=std(0x262626,.4,.9);
+  add(g,new THREE.BoxGeometry(7.2,1.7,4.2),cam,0,1.6,0);add(g,new THREE.BoxGeometry(2,1.1,4),cam,3.9,1.2,0).rotation.z=-.5;
+  for(const z of [-2.2,2.2]){add(g,new THREE.BoxGeometry(7.6,1.5,1.1),dk,0,.85,z);for(let i=0;i<5;i++)add(g,new THREE.CylinderGeometry(.6,.6,1.2,10),std(0x3a3a3a,.5,.6),-3+i*1.5,.8,z).rotation.x=Math.PI/2;}
+  const tu=new THREE.Group();add(tu,new THREE.BoxGeometry(3.8,1.3,3.2),cam,0,0,0);add(tu,new THREE.CylinderGeometry(.5,.5,.5,10),cam,-.6,.9,.6);const br=add(tu,new THREE.CylinderGeometry(.18,.22,5.6,10),dk,3.8,.15,0);br.rotation.z=Math.PI/2;tu.position.set(-.3,3,0);g.add(tu);
+  add(g,new THREE.BoxGeometry(.8,.2,1.6),std(side?myCol:enCol,.1,.6),-2.6,2.5,0).castShadow=false;
+  g.userData.turret=tu;g.userData.muzzle=new THREE.Vector3(6.6,3.2,0);return g;}
+ function mkJet(side){const o=new THREE.Group(),g=new THREE.Group(),body=std(side?0x7c8794:0x6f7462,.55,.45),dk=std(0x2a2e33,.5,.5);
+  add(g,new THREE.CylinderGeometry(.75,.95,10,12),body,0,0,0).rotation.z=Math.PI/2;add(g,new THREE.ConeGeometry(.75,3,12),body,6.4,0,0).rotation.z=-Math.PI/2;
+  add(g,new THREE.SphereGeometry(.7,10,8,0,Math.PI*2,0,Math.PI/2),new THREE.MeshStandardMaterial({color:0x1d3550,metalness:.9,roughness:.1}),3.2,.55,0).scale.set(2.2,1,1);
+  const ws=new THREE.Shape();ws.moveTo(2,0);ws.lineTo(-3.4,6.2);ws.lineTo(-5,6.2);ws.lineTo(-3.6,0);const wg=new THREE.ExtrudeGeometry(ws,{depth:.18,bevelEnabled:false});
+  for(const f of [1,-1]){const w=add(g,wg,body,0,0,0);w.rotation.x=Math.PI/2*f;w.position.y=-.1;const t=add(g,new THREE.ExtrudeGeometry((()=>{const s=new THREE.Shape();s.moveTo(-3,0);s.lineTo(-5.4,2.6);s.lineTo(-6,2.6);s.lineTo(-5.4,0);return s;})(),{depth:.12,bevelEnabled:false}),body,0,.2,0);t.rotation.x=Math.PI/2*f-(f>0?0:0);}
+  const fin=new THREE.Shape();fin.moveTo(-3,0);fin.lineTo(-5.4,3.4);fin.lineTo(-6,3.4);fin.lineTo(-5.6,0);add(g,new THREE.ExtrudeGeometry(fin,{depth:.14,bevelEnabled:false}),body,0,.4,-.07);
+  const glow=add(g,new THREE.SphereGeometry(.6,10,8),new THREE.MeshBasicMaterial({color:0xffa040}),-5.2,0,0);glow.castShadow=false;g.userData.glow=glow;
+  add(g,new THREE.BoxGeometry(1.4,.05,.8),new THREE.MeshBasicMaterial({color:side?myCol:enCol}),-1.5,.3,4.2).castShadow=false;
+  g.rotation.y=-Math.PI/2;o.add(g);o.userData.inner=g;return o;}
+ // ---------- 佈陣 ----------
+ const n=type==='air'?5:type==='naval'?4:5;const U=[];
+ for(const side of [1,0])for(let i=0;i<n;i++){let m;
+  if(type==='naval'){m=mkShip(side);m.position.set(-70+i*42+(side?0:15),0,side?55:-60);m.rotation.y=0;}
+  else if(type==='land'){m=mkTank(side);const x=-80+i*40+(side?0:18),z=side?75:-75;m.position.set(x,terrH(x,z),z);m.rotation.y=side?Math.PI/2:-Math.PI/2;}
+  else{m=mkJet(side);}
+  scene.add(m);U.push({m,side,alive:true,i,ph:Math.random()*6.28,r:70+Math.random()*60,alt:70+Math.random()*60,w:(side?1:-1)*(0.32+Math.random()*.12),die:0,vel:new THREE.Vector3()});}
+ const live=s=>U.filter(u=>u.side===s&&u.alive);
+ // 預先決定戰果
+ const kE=cfg.win?n-(Math.random()<.5?0:1):ri(1,2),kM=cfg.win?ri(0,2):n-(Math.random()<.5?0:1);
+ const plan=[];for(let i=0;i<kE;i++)plan.push(1);for(let i=0;i<kM;i++)plan.push(0);plan.sort(()=>Math.random()-.5);
+ const DUR=16;const ev=[];plan.forEach((s,i)=>ev.push({t:2.2+i*(DUR-5)/Math.max(1,plan.length)+Math.random()*.6,side:s,kill:true}));
+ for(let t=1.2;t<DUR-2;t+=.35+Math.random()*.5)ev.push({t,side:Math.random()<.5?1:0,kill:false});ev.sort((a,b)=>a.t-b.t);
+ const proj=[];const shellM=new THREE.MeshBasicMaterial({color:0xffe9a0}),misM=std(0xeeeeee,.3,.5);
+ const cap=t=>{const e=$('#b3cap');if(e)e.textContent=t;};
+ function fire(e){const A=live(e.side),B=live(1-e.side);if(!A.length||!B.length)return;const a=pick(A),b=pick(B);const from=a.m.localToWorld((a.m.userData.muzzle||new THREE.Vector3()).clone());
+  const missile=type==='air'||Math.random()<(type==='naval'?.45:.15);const mesh=missile?new THREE.Mesh(new THREE.CylinderGeometry(.2,.2,2.4,6),misM):new THREE.Mesh(new THREE.SphereGeometry(.35,6,6),shellM);mesh.rotation.z=Math.PI/2;scene.add(mesh);
+  for(let i=0;i<5;i++)spawn(from.clone(),{c:0xffd070,add:1,s:3+Math.random()*3,v:rv(6),life:.18,grow:1.5});
+  if(a.m.userData.turret){a.m.userData.turret.rotation.y=Math.atan2(-(b.m.position.z-a.m.position.z),b.m.position.x-a.m.position.x)-a.m.rotation.y;}
+  const miss=!e.kill;const off=miss?new THREE.Vector3((Math.random()-.5)*26,0,(Math.random()-.5)*26):new THREE.Vector3();
+  proj.push({mesh,missile,a,b,from,off,t:0,dur:type==='air'?1.6:1.2+Math.random()*.5,kill:e.kill,arc:missile?6:18});
+  if(e.kill)cap(`${e.side?'我方':'敵方'}${pick(T.u)}${missile?'發射飛彈':'開火'}！`);}
+ function hit(p){const tgt=p.b.m.position.clone().add(p.off);if(p.kill&&p.b.alive){p.b.alive=false;p.b.die=0.001;explode(p.b.m.position.clone().add(new THREE.Vector3(0,type==='naval'?3:2,0)),1.6);cap(p.b.side?`💥 我方${pick(T.u)}被擊毀！`:`🎯 擊毀敵方${pick(T.u)}！`);updHud();}
+  else{if(type==='naval'){tgt.y=0;splash(tgt);}else if(type==='land'){tgt.y=terrH(tgt.x,tgt.z);puff(tgt);explode(tgt,.5);}else explode(tgt,.35);}}
+ function updHud(){const a=live(1).length,b=live(0).length;const A=$('#hpA'),B=$('#hpB');if(A){A.style.width=a/n*100+'%';B.style.width=b/n*100+'%';$('#cntA').textContent=`${a}/${n}`;$('#cntB').textContent=`${b}/${n}`;}}
+ updHud();
+ // ---------- 主迴圈 ----------
+ let t=0,last=performance.now(),raf=0,done=false,camMode=0,camT=0,focus=null;
+ const ctr=new THREE.Vector3();
+ function loop(now){raf=requestAnimationFrame(loop);const dt=Math.min(.1,(now-last)/1000)*(window.B3SPEED||1);last=now;t+=dt;
+  while(ev.length&&ev[0].t<=t)fire(ev.shift());
+  for(let i=proj.length-1;i>=0;i--){const p=proj[i];p.t+=dt;const k=Math.min(1,p.t/p.dur);const to=p.b.m.position.clone().add(p.off).add(new THREE.Vector3(0,type==='air'?0:2,0));const pos=p.from.clone().lerp(to,k);pos.y+=Math.sin(k*Math.PI)*p.arc;
+   p.mesh.lookAt(pos.clone().add(to.clone().sub(pos)));p.mesh.rotateX(Math.PI/2);p.mesh.position.copy(pos);
+   if(p.missile)spawn(pos.clone(),{c:0xdddddd,op:.6,s:1.6,v:rv(.6),life:1.4,grow:3,drag:.95});else spawn(pos.clone(),{c:0xffd27a,add:1,s:1.6,life:.12});
+   if(k>=1){scene.remove(p.mesh);proj.splice(i,1);hit(p);}}
+  // 單位
+  for(const u of U){const m=u.m;
+   if(type==='naval'){m.position.x+=dt*3;if(m.userData.radar)m.userData.radar.rotation.y+=dt*2;const wv=Math.sin(t*1.3+u.i)*.5;if(!u.die){m.position.y=wv*.6;m.rotation.z=Math.sin(t*1.1+u.i)*.03;m.rotation.x=Math.sin(t*.9+u.i)*.04;}
+    else{u.die+=dt;m.position.y=-u.die*1.6;m.rotation.z=Math.min(.5,u.die*.12);m.rotation.x=Math.min(.35,u.die*.08);if(Math.random()<.5)spawn(m.position.clone().add(new THREE.Vector3((Math.random()-.5)*12,4,0)),{c:Math.random()<.4?0xff8a30:0x2a2a2a,add:Math.random()<.4,op:.8,s:4+Math.random()*4,v:new THREE.Vector3(0,6,0),life:2,grow:2.4});}}
+   else if(type==='land'){if(!u.die){const z0=u.side?75:-75,z1=u.side?32:-32;m.position.z=z0+(z1-z0)*Math.min(1,t/12);m.position.y=terrH(m.position.x,m.position.z)+Math.sin(t*8+u.i)*.05;if(Math.random()<.15)spawn(m.position.clone().add(new THREE.Vector3(0,.5,u.side?3:-3)),{c:0x9a8a6a,op:.4,s:2.5,v:new THREE.Vector3(0,2,0),life:1.4,grow:2});}
+    else{u.die+=dt;if(u.die<.05){m.userData.turret.position.y+=0;u.vel.set((Math.random()-.5)*6,14,(Math.random()-.5)*6);}if(m.userData.turret&&u.die<2){const tu=m.userData.turret;tu.position.add(u.vel.clone().multiplyScalar(dt));u.vel.y-=30*dt;if(tu.position.y<1.5){tu.position.y=1.5;u.vel.set(0,0,0);}tu.rotation.x+=dt*3;}
+     if(Math.random()<.6)spawn(m.position.clone().add(new THREE.Vector3(0,3,0)),{c:Math.random()<.35?0xff7a20:0x1e1e1e,add:Math.random()<.35,op:.8,s:3+Math.random()*4,v:new THREE.Vector3((Math.random()-.5)*1.5,7,(Math.random()-.5)*1.5),life:2.6,grow:2.6});}}
+   else{if(!u.die){const a=u.ph+u.w*t;const p=new THREE.Vector3(Math.cos(a)*u.r,u.alt+Math.sin(t*.8+u.ph)*14,Math.sin(a)*u.r*.75);const a2=a+u.w*.06;const q=new THREE.Vector3(Math.cos(a2)*u.r,u.alt+Math.sin((t+.06)*.8+u.ph)*14,Math.sin(a2)*u.r*.75);
+     u.vel.copy(q).sub(p).divideScalar(.06);m.position.copy(p);m.lookAt(q);m.rotateZ(-Math.sign(u.w)*.6);m.userData.inner.userData.glow.scale.setScalar(.8+Math.random()*.5);if(Math.random()<.35)spawn(m.localToWorld(new THREE.Vector3(0,0,-6)),{c:0xffffff,op:.35,s:1.2,life:1.2,grow:2.5,drag:1});}
+    else{u.die+=dt;u.vel.y-=25*dt;m.position.add(u.vel.clone().multiplyScalar(dt));m.rotateZ(dt*5);m.rotateX(dt*1.5);spawn(m.position.clone(),{c:Math.random()<.4?0xff8a30:0x2a2a2a,add:Math.random()<.4,op:.85,s:3+Math.random()*3,v:rv(2),life:2.2,grow:2.6});
+     if(m.position.y<(water?0:terrH(m.position.x,m.position.z))&&!u.gone){u.gone=1;m.visible=false;water?splash(m.position.clone()):explode(m.position.clone(),1);}}}}
+  // 粒子
+  for(let i=parts.length-1;i>=0;i--){const p=parts[i];p.life+=dt;const k=p.life/p.max;if(k>=1){scene.remove(p.sp);pool.push(p.sp);parts.splice(i,1);continue;}p.v.y+=p.g*dt;p.v.multiplyScalar(p.drag);p.sp.position.addScaledVector(p.v,dt);if(p.grow!==1)p.sp.scale.multiplyScalar(1+(p.grow-1)*dt);p.sp.material.opacity=p.op*(1-k);}
+  lights.forEach(l=>{if(l.intensity>0){l.intensity=Math.max(0,l.intensity-dt*14);}});
+  // 海浪
+  if(water){const pa=water.geometry.attributes.position,b=water.userData.base;for(let i=0;i<pa.count;i++){const x=b[i*3],z=b[i*3+2];pa.array[i*3+1]=Math.sin(x*.05+t*1.4)*.9+Math.cos(z*.07+t*1.1)*.7+Math.sin((x+z)*.11+t*2)*.25;}pa.needsUpdate=true;if((t*30|0)%2===0)water.geometry.computeVertexNormals();}
+  // 鏡頭
+  camT+=dt;if(camT>4.5){camT=0;camMode=(camMode+1)%3;}
+  if(type==='air'){const mine=live(1);if(!focus||!focus.alive)focus=mine[0]||live(0)[0]||U[0];const fp=focus.m.position;
+   if(camMode<2){const back=focus.vel.clone().normalize().multiplyScalar(-26);const tp=fp.clone().add(back).add(new THREE.Vector3(0,7,0));cam.position.lerp(tp,camMode===0?.08:.04);cam.lookAt(fp.clone().add(focus.vel.clone().normalize().multiplyScalar(30)));}
+   else{cam.position.lerp(new THREE.Vector3(Math.cos(t*.15)*230,150,Math.sin(t*.15)*230),.03);cam.lookAt(0,95,0);}}
+  else{const c=ctr.set(type==='naval'?t*3+10:0,0,0);let p;
+   if(camMode===0)p=new THREE.Vector3(c.x+Math.cos(t*.12)*(type==='land'?125:160),type==='land'?30:38,Math.sin(t*.12)*(type==='land'?125:160));else if(camMode===1){const f=live(1)[0]||U[0];p=f.m.position.clone().add(new THREE.Vector3(-26,type==='naval'?14:9,type==='naval'?28:24));c.copy(f.m.position).add(new THREE.Vector3(10,2,-30));}else p=new THREE.Vector3(c.x+50,type==='land'?55:80,c.z+(type==='land'?110:140));
+   cam.position.lerp(p,.035);cam.lookAt(c.clone().add(new THREE.Vector3(0,type==='naval'?2:4,0)));}
+  if(shake>0){cam.position.add(rv(shake*1.6));shake=Math.max(0,shake-dt*1.4);}
+  R.render(scene,cam);
+  if(!done&&(t>DUR||(!live(0).length||!live(1).length)&&!proj.length&&t>6)){done=true;const st={k:n-live(0).length,l:n-live(1).length};setTimeout(()=>endBanner(cfg,st),900);cap(cfg.win?'敵軍潰散，我方掌握戰場！':'我方被迫撤退……');}}
+ cam.position.set(0,80,200);raf=requestAnimationFrame(loop);
+ const onRs=()=>{R.setSize(W(),H());cam.aspect=W()/H();cam.updateProjectionMatrix();};addEventListener('resize',onRs);
+ B3skip=()=>{if(!done){done=true;endBanner(cfg,{k:kE,l:kM});}};
+ B3stop=()=>{cancelAnimationFrame(raf);removeEventListener('resize',onRs);try{R.dispose();R.forceContextLoss&&R.forceContextLoss();}catch(e){}B3stop=null;B3skip=null;};}
+
+// ---------- 作戰行動 ----------
+function warOp(kind){const t=S.sel,w=atWar(S.me,t);const mine=w.A.includes(S.me)?w.A:w.D,their=w.A.includes(S.me)?w.D:w.A;
+ const pw=sidePow(mine),pe=sidePow(their);const p=clamp(pw/(pw+pe)+0.04,0.12,0.88);const win=Math.random()<p;const sh=ri(12,20)*(win?1:-1);
+ w.score=clamp(w.score+(w.A.includes(S.me)?sh:-sh),-100,100);me().mil=Math.max(5,me().mil-(win?0.6:1.6));C(t).mil=Math.max(5,C(t).mil-(win?1.6:0.6));
+ S._battle={type:kind,win,me:S.me,enemy:t};
+ return `${BTYPE[kind].ic} ${BTYPE[kind].n}${win?'告捷！我方重創敵軍。':'失利，我方損失慘重。'}`+apply({a:win?2:-3,s:win?1:-1});}
+
 // ================= 介面 =================
 const $=s=>document.querySelector(s);
 let TAB='內政',SOUND=false,BUSY=false;
@@ -884,7 +1070,7 @@ function toast(msg,cls=''){const d=document.createElement('div');d.className='to
 function sceneSVG(name,d){let h='';try{h=(SCN[name]||SCN.office)(d||{});}catch(e){console.error(e);h=SCN.office({});}return `<svg viewBox="0 0 640 300" preserveAspectRatio="xMidYMid slice">${h}</svg>`;}
 function persStyle(seed){const r=srand(seed);return `--bd:${(3.6+r()*2.4).toFixed(1)}s;--bdl:-${(r()*3).toFixed(1)}s`;}
 function modal(html,cls=''){const m=$('#modal');m.className='show '+cls;m.innerHTML=`<div class="mbox">${html}</div>`;}
-function closeModal(){stopSpeak();$('#modal').className='';$('#modal').innerHTML='';}
+function closeModal(){stopSpeak();if(B3stop)B3stop();$('#modal').className='';$('#modal').innerHTML='';}
 function typeText(el,txt,done){let i=0;el.textContent='';const tick=()=>{i+=2;el.textContent=txt.slice(0,i);if(i<txt.length)el._t=setTimeout(tick,16);else done&&done();};el.onclick=()=>{clearTimeout(el._t);el.textContent=txt;done&&done();done=null;};tick();}
 function dateStr(){const d=new Date(S.start+(S.day-1)*864e5);return `${d.getUTCFullYear()}年${d.getUTCMonth()+1}月${d.getUTCDate()}日（${'日一二三四五六'[d.getUTCDay()]}）`;}
 
@@ -937,7 +1123,7 @@ function bar(v,max=100,col){return `<div class="bar"><i style="width:${clamp(v/m
 function spark(idx,col){const h=S.hist.slice(-40);if(h.length<2)return '';const vs=h.map(r=>r[idx]);const mn=Math.min(...vs),mx=Math.max(...vs),rg=mx-mn||1;return `<svg class="spark" viewBox="0 0 80 20" preserveAspectRatio="none"><polyline points="${vs.map((v,i)=>`${(i/(vs.length-1)*80).toFixed(1)},${(18-(v-mn)/rg*16).toFixed(1)}`).join(' ')}" fill="none" stroke="${col}" stroke-width="1.6"/></svg>`;}
 const tone=v=>v>=60?'var(--good)':v>=40?'var(--warn)':'var(--bad)';
 function render(){if(!S)return;const m=me();
- let elec;if(isDem(m)){const left=S.nextElection-S.day,last=m.limit&&S.termNo>=m.limit;elec=last?`距離任期屆滿 <b>${left}</b> 天`:`距離${m.gov==='parl'?'國會大選':'總統大選'} <b>${left}</b> 天`;if(!last&&left<=15)elec+=` · 民調 <b class="hl">${poll().toFixed(1)}%</b>`;}
+ let elec;if(isDem(m)){const left=S.nextElection-S.day,last=termCap()&&S.termNo>=termCap();elec=last?`距離任期屆滿 <b>${left}</b> 天`:`距離${m.gov==='parl'?'國會大選':'總統大選'} <b>${left}</b> 天`;if(!last&&left<=15)elec+=` · 民調 <b class="hl">${poll().toFixed(1)}%</b>`;}
  else elec=`距離權力會議 <b>${90-S.day%90}</b> 天`;
  $('#top').innerHTML=`<div class="brand">🌐 世界領袖</div><div class="who">${flagSVG(S.me,26,17)} ${m.name}${m.title} <b>${esc(S.name)}</b> · 第 ${S.termNo} 任</div><div class="date">📅 ${dateStr()} · 執政第 <b>${S.day}</b> 天</div><div class="elec">${elec}</div>
  <div class="tbtn"><button onclick="showCharts()" title="數據">📊</button><button onclick="showAch()" title="成就">🏅 ${S.ach.length}/${ACH.length}</button><button onclick="voiceSettings()" title="語音設定">🗣️${VOICE.on?'':'✕'}</button><button onclick="toggleBgm()" title="背景音樂">🎵${BGM.on?'':'✕'}</button><button onclick="toggleSound()" title="音效">${SOUND?'🔊':'🔇'}</button><button onclick="showHelp()" title="說明">❓</button><button onclick="menu()" title="選單">☰</button></div>`;
@@ -951,7 +1137,7 @@ function render(){if(!S)return;const m=me();
  updateMap();renderTarget();renderSched();renderCab();renderNews();}
 function renderTarget(){const t=S.sel;if(!t){$('#pTarget').innerHTML='<div class="ph">外交目標</div><p class="mut">點選地圖上的國家</p>';return;}const c=C(t),r=rel(S.me,t),w=atWar(S.me,t);
  const tags=[allied(S.me,t)&&'<i class="tg ally">🛡️ 同盟</i>',trading(S.me,t)&&'<i class="tg trade">🤝 貿易協定</i>',sanctioning(S.me,t)&&'<i class="tg bad">我方制裁中</i>',sanctioning(t,S.me)&&'<i class="tg bad">對方制裁我國</i>',w&&'<i class="tg war">⚔️ 交戰中</i>',inWar(t)&&!w&&'<i class="tg warn">與他國交戰中</i>',c.nuke&&'<i class="tg">☢️ 擁核</i>'].filter(Boolean).join('');
- let war='';if(w){const my=w.A.includes(S.me)?w.score:-w.score;war=`<div class="front"><span>戰況</span><div class="fbar"><i style="left:${50+my/2}%"></i></div><small>${my>30?'我方優勢':my<-30?'我方劣勢':'僵持'}（${Math.round(my)}）· 第 ${S.day-w.start} 天</small></div>`;}
+ let war='';if(w){const my=w.A.includes(S.me)?w.score:-w.score;war=`<div class="front"><span>戰況</span><button class="mini" onclick="watchFront()">🎥 觀看前線</button><div class="fbar"><i style="left:${50+my/2}%"></i></div><small>${my>30?'我方優勢':my<-30?'我方劣勢':'僵持'}（${Math.round(my)}）· 第 ${S.day-w.start} 天</small></div>`;}
  $('#pTarget').innerHTML=`<div class="ph">外交目標 <select onchange="S.sel=this.value;render()">${others().map(i=>`<option value="${i}" ${i===t?'selected':''}>${C(i).name}</option>`).join('')}</select></div>
  <div class="tgt"><div class="tpt" style="${persStyle(t)}">${portraitSVG(leaderLook(t),'breathe',{bg:'#1b2742',pin:c.fl[1]})}</div><div class="tinfo"><div class="tn">${flagSVG(t,30,20)} <b>${c.name}</b> <small>${c.title}（虛構人物）</small></div><div class="mut">${GOVNAME[c.gov]} · GDP ${fmtB(c.gdp)} · 成長 ${c.growth.toFixed(1)}% · 軍力 ${c.mil.toFixed(0)}</div>
  <div class="relrow"><span>雙邊關係</span><div class="rbar"><i style="left:${50+r/2}%;background:${relCol(r)}"></i></div><b style="color:${relCol(r)}">${Math.round(r)}</b></div><div class="tags">${tags}</div>${war}</div></div>`;}
@@ -961,7 +1147,7 @@ function renderSched(){const times=['🌅 上午','☀️ 下午','🌙 晚上']
  const cats=['內政','經濟','國防','外交',isDem(me())?'選戰':'權力'];if(!cats.includes(TAB))TAB='內政';
  h+=`<div class="tabs">${cats.map(c=>`<button class="${TAB===c?'on':''}" onclick="TAB='${c}';renderSched()">${c}${c==='選戰'&&!camp()?' 🔥':''}</button>`).join('')}</div><div class="acts">`;
  for(const a of ACTS.filter(a=>a.cat===TAB)){const r=avail(a);h+=`<button class="act" ${r?'disabled':''} onclick="clickAct('${a.id}')"><b>${nm(a)}${a.tgt&&S.sel?` → ${C(S.sel).name}`:''}</b><small>${r?'🔒 '+r:a.d}</small><em>${a.e>0?'⚡'+a.e:'⚡+'+(-a.e)}${a.cost?' · 💰'+fmtB(money(a.cost)):''}</em></button>`;}
- h+=`</div><button class="endday" onclick="endDay()">${S.slots.length<3?'提早結束今天':'結束今天'} ⏭</button>`;$('#pSched').innerHTML=h;}
+ h+=`</div>${S.slots.length<3?'<button class="autod" onclick="autoDay()">🤖 幕僚代排剩下的行程</button>':''}<button class="endday" onclick="endDay()">${S.slots.length<3?'提早結束今天':'結束今天'} ⏭</button>`;$('#pSched').innerHTML=h;}
 function renderCab(){$('#pCab').innerHTML=`<div class="ph">👥 內閣幕僚 <span class="mut">點擊聽取建議</span></div><div class="cab">${S.cab.map((c,i)=>`<button class="cm" onclick="advice(${i})"><div style="${persStyle(c.name)}">${portraitSVG(c.look,'breathe',{bg:'#1b2742'})}</div><b>${c.name}</b><small>${c.t}</small><span class="stars">${stars(c.sk)}</span></button>`).join('')}</div>`;}
 const NICON={war:'⚔️',dip:'🌐',eco:'💹',mil:'🪖',pol:'🏛️',me:'📝'};
 function renderNews(){$('#pNews').innerHTML=`<div class="ph">📰 新聞與紀錄</div><div class="nlist">${S.news.slice(0,40).map(n=>`<div class="n ${n.type}"><span>D${n.d}</span>${n.type==='me'?'':NICON[n.type]||''} ${n.txt}</div>`).join('')}</div>`;
@@ -970,7 +1156,7 @@ function renderNews(){$('#pNews').innerHTML=`<div class="ph">📰 新聞與紀�
 // ---------- 行動 ----------
 function clickAct(id){if(BUSY)return;const a=ACTS.find(x=>x.id===id);const r=avail(a);if(r){toast(r,'bad');return;}sfx('click');
  if(a.mini==='press')return pressGame(a);if(a.mini==='address')return addressGame(a);
- const out=doAction(a);afterAct(a,out.res,out.fail);}
+ const out=doAction(a);if(S._battle){const b=S._battle;S._battle=null;render();window._b3end=()=>{window._b3end=null;afterAct(a,out.res,out.fail);};battle3D(b);return;}afterAct(a,out.res,out.fail);}
 function actVoice(a,fail){if(fail)return;const t=S.sel;if(LEADERLINE[a.id]&&t){speak(LEADERLINE[a.id](t),leaderLook(t));return;}const L=ACTLINE[a.id];if(L)speak(pick(L),S.look);}
 function afterAct(a,res,fail){actVoice(a,fail);playScene(a.sc,{...(a.scd||{}),t:S.sel},nm(a));$('#result').innerHTML=`<b>${nm(a)}</b>　${res}`;$('#result').classList.remove('pop');void $('#result').offsetWidth;$('#result').classList.add('pop');
  sfx(fail?'bad':'good');achToasts();render();if(innerWidth<900)$('#pStage').scrollIntoView({behavior:'smooth',block:'start'});
@@ -990,7 +1176,7 @@ function advice(i){const c=S.cab[i],m=me();sfx('click');let t='';
  if(c.r==='fin')t=S.treasury<0?`國庫已經赤字 ${fmtB(S.treasury)}，建議刪減支出或小幅加稅。`:m.growth<m.baseGrowth?'經濟低於潛在成長，可以考慮基礎建設、投資科技或簽貿易協定。':'經濟表現不錯，可以趁勢投資教育科技，打好長期底子。';
  if(c.r==='fm'){const best=others().filter(i=>!trading(S.me,i)&&rel(S.me,i)>=25&&!sanctioning(i,S.me)).sort((a,b)=>C(b).gdp-C(a).gdp)[0];const al=others().filter(i=>!allied(S.me,i)&&rel(S.me,i)>=60)[0];t=al?`我們與${C(al).name}關係很好，可以考慮提議結盟。`:best?`建議與${C(best).name}洽簽貿易協定，對經濟幫助很大。`:'可以多做電話會談和國事訪問，先把關係拉高到 25 以上再談貿易。';}
  if(c.r==='def'){const r=rivals(1)[0];const mw=myWars();t=mw.length?'前線吃緊！可以擴充軍備，或是在戰況有利時提議停火。':rel(S.me,r)<-60?`${C(r).name}的威脅正在升高（關係 ${Math.round(rel(S.me,r))}），建議加強戰備或透過外交降溫。`:'目前沒有立即的軍事威脅。';}
- if(c.r==='camp')t=isDem(m)?(camp()===''?`選戰已經開打！目前民調約 ${poll().toFixed(1)}%，造勢、辯論、拜票都要做。`:m.limit&&S.termNo>=m.limit?'這是您最後一個任期，專心留下政績吧！':`距離大選還有 ${S.nextElection-S.day} 天，先把支持度顧好，最後 15 天再全力衝刺。`):`權力核心支持度 ${S.elite.toFixed(0)}，下次權力會議前要維持在 30 以上。宣傳攻勢可以拉抬民意。`;
+ if(c.r==='camp')t=isDem(m)?(camp()===''?`選戰已經開打！目前民調約 ${poll().toFixed(1)}%，造勢、辯論、拜票都要做。`:termCap()&&S.termNo>=termCap()?'這是您最後一個任期，專心留下政績吧！':`距離大選還有 ${S.nextElection-S.day} 天，先把支持度顧好，最後 15 天再全力衝刺。`):`權力核心支持度 ${S.elite.toFixed(0)}，下次權力會議前要維持在 30 以上。宣傳攻勢可以拉抬民意。`;
  modal(`<div class="adv"><div class="spk" style="${persStyle(c.name)}">${portraitSVG(c.look,'breathe',{bg:'#1b2742'})}<div class="stars">${stars(c.sk)}</div></div><div><b>${c.t} ${c.name}</b> <small class="mut">${VTYPES[vtypeOf(c.look)].n}聲</small><p class="evtxt" id="advt"></p><p class="mut">${SKDESC[c.r]}</p><div class="row"><button class="ch pri" onclick="closeModal()">了解</button><button class="ch" onclick="reshuffle(${i})">🔄 撤換這位幕僚</button></div></div></div>`);typeText($('#advt'),'「'+t+'」');speak(t,c.look,$('#modal .spk svg'));}
 const stars=n=>'★'.repeat(n||3)+'☆'.repeat(5-(n||3));
 const SKDESC={chief:'能力影響：社會穩定度',fin:'能力影響：經濟成長率',fm:'能力影響：外交關係改善幅度',def:'能力影響：戰爭時的作戰效率',camp:'能力影響：支持度與選舉得票'};
@@ -1004,7 +1190,8 @@ function showQueue(){if(S.over)return showOver();if(!S.queue.length){return;}con
  const ch=ev.ch(p);if(q.id==='warDeclared')sfx('war');else sfx('click');
  modal(`<div class="ev"><div class="evscene">${sceneSVG(ev.sc||'office',{...(ev.scd||{}),...p})}</div><div class="evbody"><div class="spk" style="${persStyle(adv.name)}">${portraitSVG(adv.look,'breathe',{bg:'#1b2742'})}<b>${adv.name}</b><small>${adv.t}</small></div><div><h3>${ev.title}</h3><p class="evtxt" id="evt"></p><div class="chs" id="chs" style="visibility:hidden">${ch.map((c,i)=>`<button class="ch" onclick="pickCh(${i})"><b>${c.t}</b>${c.h?`<small>${c.h}</small>`:''}</button>`).join('')}</div></div></div></div>`,'evm');
  speak(ev.title+'。'+txt,adv.look,$('#modal .spk svg'));typeText($('#evt'),txt,()=>{const e=$('#chs');if(e)e.style.visibility='visible';});
- window.pickCh=i=>{const res=ch[i].f()||'';S.queue.shift();news('me',`【${ev.title}】${ch[i].t}。${res}`);achToasts();render();
+ window.pickCh=i=>{if(window._picking)return;window._picking=1;setTimeout(()=>window._picking=0,400);S.queue.shift();const res=ch[i].f()||'';news('me',`【${ev.title}】${ch[i].t}。${res}`);achToasts();render();
+  if(S._succ){S._succ=0;return succModal();}
   if(S.over){return showOver();}
   if(q.id==='electionNight'){const w=S.queue[0];return showQueue();}
   if(q.id==='electionWin')speak('謝謝大家！我們一起讓國家變得更好！',S.look);
@@ -1021,7 +1208,8 @@ function voiceSettings(){const demo={ym:'我是年輕男生的聲音，充滿活
  <div class="opt"><label>語音</label><div><button class="sw ${VOICE.on?'on':''}" onclick="VOICE.on=true;saveVoice();voiceSettings()">開啟</button><button class="sw ${VOICE.on?'':'on'}" onclick="VOICE.on=false;saveVoice();stopSpeak();voiceSettings()">關閉</button></div></div>
  <div class="opt"><label>語速</label><input type="range" min="0.6" max="1.6" step="0.1" value="${VOICE.rate}" oninput="VOICE.rate=+this.value;saveVoice()"></div>
  <div class="opt"><label>音量</label><input type="range" min="0" max="1" step="0.1" value="${VOICE.vol}" oninput="VOICE.vol=+this.value;saveVoice()"></div>
- <h3>試聽六種聲音</h3><div class="vgrid">${VKEYS.map(k=>`<button class="cm" onclick="speak('${demo[k]}',VLOOK['${k}'],this.querySelector('svg'))"><div style="${persStyle('v'+k)}">${portraitSVG(lk(k),'breathe',{bg:'#1b2742'})}</div><b>${VTYPES[k].n}</b><small>▶ 試聽</small></button>`).join('')}</div>
+ <h3>六種聲音（可以替每一種指定不同的系統語音）</h3><div class="vgrid">${VKEYS.map(k=>{const cur=voiceFor(k).v;return `<div class="cm vcard"><button class="vplay" onclick="speak('${demo[k]}',VLOOK['${k}'],this.querySelector('svg'))"><div style="${persStyle('v'+k)}">${portraitSVG(lk(k),'breathe',{bg:'#1b2742'})}</div><b>${VTYPES[k].n}</b><small>▶ 試聽</small></button><select onchange="VOICE.pick['${k}']=this.value;saveVoice();assignVoices();voiceSettings()"><option value="">自動（${cur?esc(cur.name):'系統預設'}）</option>${VOICES.map(v=>`<option value="${esc(v.voiceURI)}" ${VOICE.pick[k]===v.voiceURI?'selected':''}>${esc(v.name)}${v.localService===false?'（線上）':''}</option>`).join('')}</select></div>`;}).join('')}</div>
+ <p class="fine">💡 如果六種聲音聽起來差不多，代表你的裝置只裝了一個中文語音。可以到系統設定下載更多中文語音（例如男聲）：iPhone／iPad：設定 → 輔助使用 → 朗讀內容 → 聲音 → 中文；Mac：系統設定 → 輔助使用 → 朗讀內容 → 系統聲音 → 管理聲音；Windows：設定 → 時間與語言 → 語音 → 新增語音。下載後重新整理網頁即可。標示「線上」的語音通常無法調整音高。</p>
  <p class="fine">語音使用你裝置內建的中文語音合成，不同手機或電腦的聲音會不一樣。你的角色、幕僚、記者、主播和各國元首都會依照性別和年紀，自動用對應的聲音說話。</p><div class="row r"><button class="pri" onclick="closeModal()">完成</button></div>`);
  window.VLOOK={};VKEYS.forEach(k=>VLOOK[k]=lk(k));}
 // ---------- 一天結束 ----------
@@ -1036,7 +1224,13 @@ function showOver(){const L=legacy(),m=me(),[t,d]=OVER[S.over.reason]||['遊戲�
  modal(`<div class="over"><div class="evscene">${sc}</div><h2>${t}</h2><p>${d}${S.over.reason==='election'?`（得票率 ${(S.elecShare||0).toFixed(1)}%）`:''}</p>
  <div class="grade"><b>${L.g[0]}</b><span>歷史評價：${L.g[1]}</span></div>
  <div class="ogrid"><div>執政天數<b>${S.day}</b></div><div>任期<b>${S.termNo}</b></div><div>GDP 變化<b class="${L.gch>=0?'up':'dn'}">${L.gch>=0?'+':''}${L.gch.toFixed(1)}%</b></div><div>最終支持度<b>${S.approval.toFixed(1)}%</b></div><div>國事訪問<b>${S.stats.visits}</b></div><div>貿易協定<b>${S.stats.deals}</b></div><div>戰爭勝/敗<b>${S.stats.warsWon}/${S.stats.warsLost}</b></div><div>成就<b>${S.ach.length}/${ACH.length}</b></div></div>
- <div class="row c"><button class="big pri" onclick="S=null;showStart()">再玩一次</button></div></div>`,'full');}
+ <div class="row c">${['termEnd','retire'].includes(S.over.reason)?'':'<button class="big pri" onclick="doComeback()">🔁 東山再起，繼續玩</button>'}<button class="big ${['termEnd','retire'].includes(S.over.reason)?'pri':''}" onclick="S.over=null;succModal()">👑 交棒給接班人繼續玩</button><button class="big" onclick="S=null;showStart()">🆕 開新遊戲</button></div></div>`,'full');}
+function doComeback(){comeback();closeModal();render();playScene('rally',{},'東山再起！');speak('我回來了！謝謝大家再給我一次機會！',S.look);save();}
+function succModal(){const lk=window._sl=window._sl||genLook('s'+Math.random(),me().reg);modal(`<h2>👑 選擇接班人</h2><div class="avatar"><div class="apv" style="${persStyle('sc')}">${portraitSVG(lk,'breathe',{bg:'#1b2742',pin:me().fl[1]})}<div class="row c"><button onclick="window._sl=null;succModal()">🎲 換一位</button><button onclick="speak('大家好，我將帶領國家繼續前進！',window._sl,document.querySelector('.apv svg'))">▶ 試聽</button></div></div><div class="aopts"><div class="opt"><label>姓名</label><input id="sname" maxlength="10" value="${esc(gName(lk))}"></div><p class="mut">聲音：${VTYPES[vtypeOf(lk)].n}</p><p>接班人會繼承目前的國家狀況、外交關係與戰爭，從第 1 任重新開始。</p><div class="row r"><button class="pri big" onclick="doSucc()">宣誓就職 🎖️</button></div></div></div>`,'full');}
+function doSucc(){const n=($('#sname').value||'').trim();successor(n,window._sl);window._sl=null;closeModal();$('#app').classList.remove('hide');render();playScene('office',{t:0},'新領袖上任');speak(`大家好，我是${S.name}，我會帶領國家繼續前進！`,S.look);save();}
+function watchFront(){const t=S.sel,w=atWar(S.me,t);if(!w)return;const my=w.A.includes(S.me)?w.score:-w.score;window._b3end=null;battle3D({type:pick(['naval','land','air']),win:Math.random()<clamp(.5+my/150,.15,.85),me:S.me,enemy:t});}
+function autoDay(){if(BUSY||S.over)return;const done=[];let g=0;while(S.slots.length<3&&g++<5){const a=autoPick();if(!a||avail(a))break;doAction(a);done.push(nm(a));if(S.queue.length)break;}
+ if(!done.length){toast('沒有可以安排的行程','bad');return;}const last=ACTS.find(x=>x.id===S.slots[S.slots.length-1].id);playScene(last.sc,{...(last.scd||{}),t:S.sel},nm(last));$('#result').innerHTML=`<b>🤖 幕僚代排</b>　${done.join('、')}`;sfx('good');achToasts();render();save();if(S.queue.length)setTimeout(showQueue,300);}
 function showCharts(){const H=S.hist;if(H.length<2){toast('再多玩幾天就有數據圖表了');return;}const ch=(idx,lab,col,unit)=>{const vs=H.map(r=>r[idx]);let mn=Math.min(...vs),mx=Math.max(...vs);if(mx-mn<1){mx+=.5;mn-=.5;}const W=560,Hh=120;const pts=vs.map((v,i)=>`${(i/(vs.length-1)*W).toFixed(1)},${(Hh-(v-mn)/(mx-mn)*Hh).toFixed(1)}`).join(' ');
   return `<div class="chart"><b>${lab}</b><svg viewBox="-40 -10 ${W+50} ${Hh+30}"><line x1="0" y1="0" x2="${W}" y2="0" stroke="#26324d"/><line x1="0" y1="${Hh}" x2="${W}" y2="${Hh}" stroke="#26324d"/><text x="-6" y="4" text-anchor="end">${mx.toFixed(1)}${unit}</text><text x="-6" y="${Hh+4}" text-anchor="end">${mn.toFixed(1)}${unit}</text><text x="0" y="${Hh+18}">D${H[0][0]}</text><text x="${W}" y="${Hh+18}" text-anchor="end">D${H[H.length-1][0]}</text><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2.5"/></svg></div>`;};
  modal(`<h2>📊 施政數據</h2>${ch(1,'支持度','#f2b84b','%')}${ch(2,'經濟成長率','#3ecf8e','%')}${ch(3,'國庫（佔 GDP %）','#5aa9ff','%')}<div class="row r"><button class="pri" onclick="closeModal()">關閉</button></div>`);}
@@ -1050,6 +1244,8 @@ function showHelp(){modal(`<h2>❓ 遊戲說明</h2><div class="help">
  <p><b>戰爭：</b>關係 ≤ −40 才能宣戰。戰力取決於軍力，盟友可能參戰；長期戰爭會拖垮經濟和支持度。對擁核國家無法徹底獲勝。</p>
  <p><b>地圖顏色：</b>綠色＝友好、紅色＝敵對、金色＝你的國家、紅斜紋＝與你交戰。藍色連線＝你的盟友，紅色虛線＝戰爭。</p>
  <p><b>語音與音樂：</b>右上角 🗣️ 可以設定角色語音（六種聲音：年輕、中年、資深 × 男、女），🎵 開關背景音樂（戰爭時會變得緊張）。</p>
+ <p><b>3D 戰場：</b>和敵國交戰時，國防分頁可以「指揮海戰／陸戰／空戰」，會進入 3D 戰場畫面，勝負會推動戰況。沒有戰爭時也可以用「兵棋推演」預覽。</p>
+ <p><b>一直玩下去：</b>任期屆滿可以修憲再選或交棒給接班人；下台後也可以東山再起。懶得排行程可以按「🤖 幕僚代排」。</p>
  <p><b>內閣：</b>每位幕僚有 1～5 星能力，會影響各自負責的領域。點幕僚可以聽建議或撤換。</p>
  <p><b>小技巧：</b>點擊內閣幕僚可以聽建議；記者會和全國演說是小遊戲，答得好加分更多。</p>
  <p class="fine">所有人物皆為虛構，國家數據為約略值，遊戲機制為簡化模擬，不代表任何政治立場。</p></div><div class="row r"><button class="pri" onclick="closeModal()">開始吧</button></div>`);}
